@@ -127,6 +127,18 @@
       "sourceRoot": "libs/elements-lib/src",
       "prefix": "nx-angular-web-components",
       "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/elements-lib/tsconfig.lib.json",
+            "project": "libs/elements-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/elements-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {

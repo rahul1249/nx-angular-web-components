@@ -7,3 +7,5 @@ import { ButtonComponent } from './button/button.component';
   declarations: [ButtonComponent],
 })
 export class ElementsLibModule {}
+
+export { ButtonComponent } from './button/button.component';

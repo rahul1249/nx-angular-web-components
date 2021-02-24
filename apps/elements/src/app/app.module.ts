@@ -1,12 +1,19 @@
-import { NgModule } from '@angular/core';
+import { DoBootstrap, NgModule, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { createCustomElement } from '@angular/elements';
 
-import { AppComponent } from './app.component';
+import { ElementsLibModule, ButtonComponent } from '@elements-lib';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule],
-  providers: [],
-  bootstrap: [AppComponent],
+  imports: [BrowserModule, ElementsLibModule]
 })
-export class AppModule {}
+export class AppModule implements DoBootstrap {
+
+  constructor(private injector: Injector) {}
+
+  public ngDoBootstrap(): void {
+    const customButtonElement = createCustomElement(ButtonComponent, { injector: this.injector });
+    customElements.define('rahul-ext-button', customButtonElement);
+  }
+
+}

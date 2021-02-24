@@ -15,9 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-angular-web-components/elements-lib": [
-        "libs/elements-lib/src/index.ts"
-      ]
+      "@elements-lib": ["libs/elements-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

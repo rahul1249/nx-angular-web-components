@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'nx-angular-web-components-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
 
-  constructor() { }
+  public clickCount = 0;
 
-  ngOnInit(): void {
+  public increaseCount(): void {
+    ++this.clickCount;
   }
 
 }

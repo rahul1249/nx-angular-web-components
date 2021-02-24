@@ -1,0 +1,13 @@
+{
+  "name": "@nx-angular-web-components/elements",
+  "version": "2.3.0",
+  "description": "angular elements build using angular app in nx workspace",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rahul",
+  "license": "ISC",
+  "files": [
+    "elements.js"
+  ]
+}

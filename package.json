@@ -1,6 +1,6 @@
 {
   "name": "nx-angular-web-components",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "license": "MIT",
   "scripts": {
     "nx": "nx",
@@ -31,7 +31,7 @@
     "bump-version:major": "npm version major --force && cd apps/elements && npm version major --force",
     "bump-version:minor": "npm version minor --force && cd apps/elements && npm version minor --force",
     "bump-version:patch": "npm version patch --force && cd apps/elements && npm version patch --force",
-    "build:lib-pack": "npm run build-elements && && cd dist/apps/elements && npm pack",
+    "build:lib-pack": "npm run build-elements && cd dist/apps/elements && npm pack",
     "commit-git": "git commit -m \"build: adds new release\" && git push origin && git push origin --tags",
     "pre-publish:minor": "run-s bump-version:minor build:lib-pack commit-git",
     "pre-publish:major": "run-s bump-version:major build:lib-pack commit-git",

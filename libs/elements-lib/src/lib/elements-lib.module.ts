@@ -9,3 +9,4 @@ import { ButtonComponent } from './button/button.component';
 export class ElementsLibModule {}
 
 export { ButtonComponent } from './button/button.component';
+export { elementsBundleInfoToken } from './elements-bundle-info-token';

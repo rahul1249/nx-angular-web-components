@@ -13,7 +13,7 @@ export class AppModule implements DoBootstrap {
 
   public ngDoBootstrap(): void {
     const customButtonElement = createCustomElement(ButtonComponent, { injector: this.injector });
-    customElements.define('rahul-ext-button', customButtonElement);
+    customElements.define('counter-button', customButtonElement);
   }
 
 }

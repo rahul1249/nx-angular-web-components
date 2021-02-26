@@ -1,4 +1,4 @@
-import { Component, Inject, Optional } from '@angular/core';
+import { Component, Inject, Input, Optional } from '@angular/core';
 import { elementsBundleInfoToken } from '../elements-bundle-info-token';
 
 @Component({
@@ -7,6 +7,8 @@ import { elementsBundleInfoToken } from '../elements-bundle-info-token';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
+
+  @Input() buttonText: string;
 
   public clickCount = 0;
   public version = 'NA';

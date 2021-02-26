@@ -1,8 +1,13 @@
-<p>This is a Custom Element!!!</p>
-<br>
-<b>Package Information</b>
-<br>
-<b>Name: </b>{{name}}, <b>version: </b>{{version}}
-<br>
-<p>Button clicked {{ clickCount }} times.</p>
-<button (click)="increaseCount()">Click</button>
+<ng-template [ngIf]="buttonText">
+    <p>Button clicked {{ clickCount }} times.</p>
+    <button (click)="increaseCount()">{{buttonText}}</button>
+</ng-template>
+<ng-template [ngIf]="!buttonText">
+    <p>Custom Element!!!</p>
+    <p>Error: Counter Buttton: counter-button: Required property <b>buttonText</b> not provided.</p>
+    <br>
+    <b>Package Information</b>
+    <br>
+    <b>Name: </b>{{name}}, <b>version: </b>{{version}}
+    <br>
+</ng-template>
